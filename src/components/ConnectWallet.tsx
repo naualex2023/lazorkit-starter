@@ -19,8 +19,9 @@ export default function ConnectWallet() {
         </div>
         <h2 className="text-xl font-bold text-green-400">Wallet Connected</h2>
         <p className="text-sm text-slate-400 font-mono bg-slate-900 px-3 py-1 rounded">
-          {smartWalletPubkey.toBase58().slice(0, 6)}...
-          {smartWalletPubkey.toBase58().slice(-6)}
+          {smartWalletPubkey.toBase58()}
+          {/* {smartWalletPubkey.toBase58().slice(0, 6)}...
+          {smartWalletPubkey.toBase58().slice(-6)} */}
         </p>
         <button
           onClick={disconnect}
