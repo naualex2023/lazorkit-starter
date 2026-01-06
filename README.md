@@ -2,6 +2,28 @@
 
 A production-ready starter template for building Passkey-native Solana apps using [Lazorkit SDK](https://docs.lazorkit.com/). This project demonstrates authentication and gasless transactions.
 
+## 📺 Live Demo
+
+> "Eliminating the friction from Web3 onboarding through biometrics and sponsored transactions."
+
+### [**Watch the Demo on Vimeo →**](https://vimeo.com/1151937616?share=copy)
+
+---
+
+### 🔍 Key Highlights of the Demo:
+
+* **Instant Onboarding**: Creating a non-custodial Solana Smart Wallet in under 2 seconds using native device biometrics—no seed phrases, no extensions.
+* **WebAuthn Sync**: Demonstrating a secure cross-device login by scanning a QR code on Desktop to authorize via a Smartphone's secure enclave.
+* **Zero-Fee UX**: Executing a live transaction on the Solana Devnet where the network fee is fully sponsored by the **LazorKit Paymaster**, requiring zero SOL from the user.
+
+---
+
+### 🛠️ Built With
+* **Framework**: Next.js 15+ (Turbopack)
+* **Auth**: WebAuthn / Passkeys (Secp256r1)
+* **Infrastructure**: LazorKit SDK & Paymaster
+* **Network**: Solana Devnet
+
 ## 🚀 Quick Start
 
 ### 1. Installation
@@ -20,8 +42,8 @@ Rename `.env.example` to `.env.local` and add your keys:
 
 ```env
 NEXT_PUBLIC_RPC_URL=[https://api.devnet.solana.com](https://api.devnet.solana.com)
-NEXT_PUBLIC_PORTAL_URL=[https://portal.lazorkit.xyz](https://portal.lazorkit.xyz)
-NEXT_PUBLIC_PAYMASTER_URL=[https://paymaster.lazorkit.xyz](https://paymaster.lazorkit.xyz)
+NEXT_PUBLIC_PORTAL_URL=[https://portal.lazor.sh](https://portal.lazor.sh)
+NEXT_PUBLIC_PAYMASTER_URL=[https://kora.devnet.lazorkit.com](https://kora.devnet.lazorkit.com)
 ```
 
 ### 3. Run Development Server
