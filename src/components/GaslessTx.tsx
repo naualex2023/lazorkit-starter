@@ -10,10 +10,10 @@ export default function GaslessTx() {
   const [loading, setLoading] = useState(false);
   const [txSig, setTxSig] = useState('');
 
-  // Создаем подключение к RPC
+  // Creating RPC connection
   const connection = new Connection(process.env.NEXT_PUBLIC_RPC_URL!, 'confirmed');
 
-  // Функция для обновления баланса
+  // Function to refresh balance
   const refreshBalance = useCallback(async () => {
     if (smartWalletPubkey) {
       const bal = await connection.getBalance(smartWalletPubkey);
@@ -23,12 +23,12 @@ export default function GaslessTx() {
 
   useEffect(() => {
     refreshBalance();
-    // Обновляем баланс каждые 10 секунд
+    // Refresh balance every 10 seconds
     const interval = setInterval(refreshBalance, 10000);
     return () => clearInterval(interval);
   }, [refreshBalance]);
 
-  // Функция для запроса Airdrop (чтобы было что отправлять)
+  // Function to request Airdrop (so there's something to send)
   const requestAirdrop = async () => {
     if (!smartWalletPubkey) return;
     setLoading(true);
@@ -54,14 +54,14 @@ export default function GaslessTx() {
     setTxSig('');
 
     try {
-      // Инструкция: отправка 0.01 SOL самому себе (для теста)
+      // Instruction: sending 0.01 SOL to yourself (for testing)
       const instruction = SystemProgram.transfer({
         fromPubkey: smartWalletPubkey,
         toPubkey: smartWalletPubkey,
         lamports: 0.01 * LAMPORTS_PER_SOL,
       });
 
-      // SDK Lazorkit отправит это через Paymaster
+      // SDK Lazorkit sends it via Paymaster
       const signature = await signAndSendTransaction({
         instructions: [instruction],
       });

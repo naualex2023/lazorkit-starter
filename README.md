@@ -2,21 +2,35 @@
 
 A production-ready starter template for building Passkey-native Solana apps using [Lazorkit SDK](https://docs.lazorkit.com/). This project demonstrates authentication and gasless transactions.
 
-## 📺 Live Demo
+## 📺 Live Demo Video
 
 > "Eliminating the friction from Web3 onboarding through biometrics and sponsored transactions."
 
 ### [**Watch the Demo on Vimeo →**](https://vimeo.com/1151937616?share=copy)
-
 ---
-
 ### 🔍 Key Highlights of the Demo:
 
 * **Instant Onboarding**: Creating a non-custodial Solana Smart Wallet in under 2 seconds using native device biometrics—no seed phrases, no extensions.
 * **WebAuthn Sync**: Demonstrating a secure cross-device login by scanning a QR code on Desktop to authorize via a Smartphone's secure enclave.
 * **Zero-Fee UX**: Executing a live transaction on the Solana Devnet where the network fee is fully sponsored by the **LazorKit Paymaster**, requiring zero SOL from the user.
+---
+## 🚀 Live Experience
+
+Experience the seamless onboarding flow live on Vercel:
+
+### 🔗 [**Launch App: lazorkit-starter-six.vercel.app**](https://lazorkit-starter-six.vercel.app/)
 
 ---
+
+### 💡 Tester's Guide
+
+To fully appreciate the Smart Wallet capabilities, we recommend the following flow:
+
+1.  **Mobile First**: Open the link on your smartphone to create a wallet using FaceID or TouchID. It’s the fastest way to experience "Seedless" onboarding.
+2.  **Desktop Sync**: Open the link on your PC and use the **Sign In** feature. Scan the QR code with your phone to see the cross-device Passkey authentication in action.
+3.  **Gasless Execution**: Once logged in, click **"Execute Gasless TX"**. Even if your new wallet has 0 SOL, the transaction will succeed thanks to our integrated Paymaster sponsorship.
+
+> **Note for Linux Users**: If testing on a desktop environment without configured biometrics, please enable the **Virtual Authenticator** in Chrome DevTools (`F12` -> `More tools` -> `WebAuthn`) to simulate the Passkey flow.
 
 ### 🛠️ Built With
 * **Framework**: Next.js 15+ (Turbopack)

@@ -10,7 +10,7 @@ export default function LazorProviderWrapper({ children }: { children: ReactNode
       portalUrl={process.env.NEXT_PUBLIC_PORTAL_URL!}
       paymasterConfig={{
         paymasterUrl: process.env.NEXT_PUBLIC_PAYMASTER_URL!,
-        // Здесь можно добавить настройки для токенов (например, USDC), если нужно
+        // Here you can add more paymaster options if needed
       }}
     >
       {children}
